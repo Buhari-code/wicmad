@@ -1,0 +1,190 @@
+.navbar {
+    height: 17vh;
+    background-color: rgb(240, 231, 241);
+    position: fixed;
+    width: 100%;
+    z-index: 3000;
+
+    .nav {
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+
+        .nav-tabs {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-logo {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: auto;
+                height: 10vh;
+                object-fit: contain;
+            }
+        }
+
+        .nav-tab {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            a {
+                margin-right: 1rem;
+                color: black;
+                font-family: "Poppins", serif;
+                transition: .6s ease-in-out;
+
+                .btn {
+                    display: none;
+                }
+            }
+
+            a:hover {
+                background-color: rgb(9, 9, 62);
+                color: white;
+                padding: .5rem;
+                border-radius: .5rem;
+            }
+
+            a:active,
+            a:focus {
+                background-color: rgb(9, 9, 62);
+                color: white;
+                padding: .5rem;
+                border-radius: .5rem;
+            }
+
+            a.active {
+                background-color: rgb(9, 9, 62);
+                color: white;
+                padding: .5rem;
+                border-radius: .5rem;
+            }
+        }
+
+        .nav-bar {
+            .icon {
+                font-size: 2rem;
+                color: rgb(9, 9, 62);
+                cursor: pointer;
+                display: none;
+            }
+
+
+        }
+
+        .login-btn {
+            button {
+                background-color: rgb(115, 24, 99);
+                padding: .6rem;
+                border-radius: .6rem;
+                font-family: "Poppins", serif;
+                color: white;
+                font-size: 1rem;
+            }
+            button:hover{
+                background-color: rgb(9, 9, 62);
+            }
+        }
+    }
+}
+
+.btn {
+    display: none;
+    margin-top: 1rem;
+    background-color: rgb(9, 9, 62);
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    padding: .5rem;
+    font-family: "Poppins", serif;
+    color: white;
+    font-size: 1rem;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        .nav {
+
+            .nav-tabs {
+                flex-direction: column;
+
+            }
+
+            .nav-tab {
+                position: absolute;
+                flex-direction: column;
+                top: 100%;
+                align-items: center;
+                right: -30rem;
+                background-color: rgb(240, 231, 241);
+                width: 40%;
+                padding: 2rem;
+                transition: right 0.4s ease-in-out;
+
+
+
+
+                a {
+                    margin-top: 1rem;
+                    background-color: rgb(212, 212, 243);
+                    width: 100%;
+                    text-align: center;
+                    box-shadow: inset 2px 2px 5px rgb(172, 181, 228);
+                    border-radius: 1rem;
+                    padding: .5rem;
+                }
+
+                a:hover,
+                a:focus,
+                a:active,
+                a.active {
+                    box-shadow: none;
+                    border-radius: 1rem;
+                }
+
+
+            }
+
+            .nav-bar {
+                .icon {
+                    display: block;
+                }
+
+
+            }
+
+            .login-btn {
+                display: none;
+            }
+        }
+
+        .nav-tab.activeNavbar {
+            right: -1rem
+        }
+
+
+    }
+
+    .btn {
+        display: block;
+
+    }
+
+}
+
+
+@media screen and (max-width: 430px) {
+    .navbar {
+        .nav {
+            .nav-tab {
+                width: 60%;
+            }
+        }
+    }
+}

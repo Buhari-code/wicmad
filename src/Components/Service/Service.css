@@ -1,0 +1,126 @@
+.service {
+    padding: 2rem 1rem;
+
+    .box-model {
+        display: grid;
+        gap: 2rem;
+        position: relative;
+
+
+
+
+        .box {
+            background-color: rgb(9, 9, 62);
+            padding: 1rem;
+            border-top-right-radius: .7rem;
+            border-top-left-radius: .7rem;
+            border-bottom-right-radius: .7rem;
+            border-bottom-left-radius: .7rem;
+
+
+
+            h2 {
+                color: rgb(240, 231, 241);
+                font-family: "Poppins", serif;
+                text-align: center;
+                border-radius: .6rem;
+                padding: .4rem;
+                font-size: 1.3rem;
+            }
+
+            p {
+                color: #fff;
+                font-family: "Poppins", serif;
+                padding-top: .9rem;
+                font-size: .9rem;
+            }
+
+            button {
+                color: rgb(9, 9, 62);
+                font-family: "Poppins", serif;
+                font-size: 1rem;
+                margin-left: 0;
+                margin-top: 1rem;
+                font-weight: 700;
+                background-color: #fff;
+                border-radius: .5rem;
+                padding-left: .7rem;
+                padding-right: .7rem;
+                transition: 1s ease-in-out;
+                text-align: center;
+
+                .icon {
+                    font-size: 1rem;
+                }
+            }
+
+            .extraContent {
+                background-color: rgb(9, 9, 62);
+                position: absolute;
+                right: 0;
+                transform: translateY(7%);
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+        }
+                .box:nth-child(2) .extraContent {
+                    background-color: rgb(240, 231, 241);
+                }
+
+        .expanded {
+            border-bottom-right-radius: .7rem;
+            border-bottom-left-radius: .7rem;
+            padding-bottom: 2rem;
+        }
+
+        .notexpand {
+            margin-bottom: 1rem;
+        }
+
+        .box:nth-child(2) {
+            background-color: rgb(240, 231, 241);
+
+            h2 {
+                color: rgb(9, 9, 62);
+            }
+
+            p {
+                color: rgb(9, 9, 62);
+            }
+
+            button {
+                background-color: rgb(9, 9, 62);
+                color: rgb(240, 231, 241);
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (min-width : 768px) {
+    .service {
+        padding: 2rem 4rem;
+
+        .box-model {
+            grid-template-columns: repeat(2, 1fr);
+
+            .expanded {
+                    border-bottom-right-radius: 0rem;
+                    border-bottom-left-radius: 0rem;
+                    padding-bottom: 0rem;
+                }
+        }
+    }
+
+}
+
+@media screen and (min-width : 1116px) {
+    .service {
+        .box-model {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+}

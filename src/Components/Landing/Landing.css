@@ -1,0 +1,100 @@
+.landing{
+
+    .box-model{
+      background-image: url('../../assets/fgjr7.jpg');
+        height: auto;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        padding-top: 5rem;
+        object-fit: contain;
+
+        .main-heading{
+            h1{
+                color: white;
+                font-family: "Poppins", serif;
+                font-size: 3rem;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        .image-design{
+            width: 100%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+    
+
+}
+
+@media screen and (max-width: 1115px){
+    .landing{
+        .box-model{
+            .main-heading{
+                h1{
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .landing {
+        .box-model {
+            .main-heading {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .landing {
+        .box-model {
+            flex-direction: column;
+            padding-top: 10rem;
+            .main-heading {
+                h1 {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .landing {
+        .box-model {
+            flex-direction: column;
+
+            .main-heading {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .landing {
+        .box-model {
+
+            .main-heading {
+                h1 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
