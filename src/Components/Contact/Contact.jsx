@@ -77,7 +77,7 @@ function Contact({ref}) {
 
    try{
     const response = await emailjs.send(serviceId, templateId, templateParam, publicKey)
-    alert("Thank You for register, Our Teammate will Call you Quikly")
+    alert("Thank You for register, Our Teammate will Call you Quickly")
     return response
    } catch(error){
       alert('Error sending email. Please try again.');
