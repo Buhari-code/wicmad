@@ -2,6 +2,9 @@
 
     .box-model{
       background-image: url('../../assets/fgjr7.jpg');
+    background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
        width: 100%;
         height: auto;
         display: flex;
