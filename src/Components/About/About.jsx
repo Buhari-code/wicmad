@@ -3,7 +3,7 @@ import './About.css';
 import img from '../../assets/4208395.jpg';
 import img1 from '../../assets/project-img.png';
 import video from '../../assets/OON Video.mp4';
-import img2 from '../../assets/icon1.png'
+import img2 from '../../assets/icon.png'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
@@ -17,8 +17,8 @@ const About = React.forwardRef((props, ref) => {
       <div className="secHeading">
         <h1>About Us</h1>
       </div>
-      <div className="box-model flex"  data-aos= 'fade-right'>
-        <div className="box-image">
+      <div className="box-model flex">
+        <div className="box-image" data-aos= 'fade-right'>
           <img src={img} alt="" />
         </div>
         <div className="box" data-aos= 'fade-left'>
@@ -32,7 +32,7 @@ const About = React.forwardRef((props, ref) => {
       </div>
       <div className="projects flex">
         
-          <div className="project1" data-aos= 'fade-up'>
+          <div className="project1" data-aos='fade-up'>
             <a href="https://letz-vacation.com/" target='blank'  rel="noopener noreferrer" >
             <img src={img1} alt="" />
           </a>
@@ -42,7 +42,7 @@ const About = React.forwardRef((props, ref) => {
         </div>
        
           
-          <div className="project1" data-aos= 'fade-up'>
+          <div className="project1" data-aos='fade-up'>
             <a href="https://play.google.com/store/apps/details?id=com.food_oon.oonapp" target='blank'  rel="noopener noreferrer" >
            {/* <video src={video} autoPlay loop muted playsInline></video> */}
            <img src={img2} alt="" />
