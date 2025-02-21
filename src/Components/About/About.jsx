@@ -3,7 +3,7 @@ import './About.css';
 import img from '../../assets/4208395.jpg';
 import img1 from '../../assets/project-img.png';
 import video from '../../assets/OON Video.mp4';
-import img2 from '../../assets/icon.png'
+import img2 from '../../assets/icon1.png'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
@@ -48,7 +48,7 @@ const About = React.forwardRef((props, ref) => {
            <img src={img2} alt="" />
           </a>
           <h3>OON - Food Recipe Mobile App</h3>
-          <p>OON – Food Recipe Mobile App is crafted to provide a seamless experience with smooth navigation and fast performance. The app ensures efficient search filtering, helping users quickly find recipes based on ingredients, categories, and keywords. Its inituitive interface makes exploring and discovering new recipes effortless.</p>
+          <p>OON – Food Recipe Mobile App is crafted to provide a seamless experience with smooth navigation and fast performance. The app ensures efficient search filtering, helping users quickly find recipes based on ingredients, categories, and keywords. Its intuitive interface makes exploring and discovering new recipes effortless. Additionally, the app provides detailed step-by-step cooking instructions.</p>
           <h4><span>Live App : </span><a href="https://play.google.com/store/apps/details?id=com.food_oon.oonapp" target='blank'  rel="noopener noreferrer">OON - Food Recipe</a></h4>
         </div>
       </div>
