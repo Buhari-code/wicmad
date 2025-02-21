@@ -1,5 +1,13 @@
 .contact{
     padding: 2rem 4rem;
+    h2{
+        font-family: "Poppins", serif;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 1rem;
+        color: rgb(9, 9, 62);
+    }
     .secHeading {
             font-family: "Poppins", serif;
             text-align: center;
@@ -53,6 +61,9 @@
                     border-radius: .5rem;
                     font-family: "Poppins", serif;
         
+                }
+                textarea{
+                    resize: none;
                 }
 
         .cont{

@@ -117,6 +117,7 @@ function Contact({ref}) {
           <button onClick={handleSubmit}>Submit</button>
         </div>
       </div>
+      <h2>Address : Wicmad Technologies, No 66 A, Karikalan Main Street, Adambakkam - 88 , Mobile No : +91 9003463709</h2>
     </div>
     </>
   )
