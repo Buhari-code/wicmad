@@ -107,7 +107,7 @@
         padding: 2rem 1rem;
     }
 }
-@media screen and (max-width : 350px) {
+@media screen and (max-width : 400px) {
     .contact {
         .secHeading {
             font-size: .8rem;

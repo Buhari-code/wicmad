@@ -155,7 +155,7 @@
     }
 
 }
-@media screen and (max-width : 350px){
+@media screen and (max-width : 400px){
     .service{
         .secHeading{
             font-size: .8rem;
