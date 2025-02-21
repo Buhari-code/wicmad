@@ -2,6 +2,7 @@
 
     .box-model{
       background-image: url('../../assets/fgjr7.jpg');
+       width: 100%;
         height: auto;
         display: flex;
         align-items: center;
@@ -14,8 +15,23 @@
                 color: white;
                 font-family: "Poppins", serif;
                 font-size: 3rem;
-                font-weight: 700;
-                text-align: center;
+                font-weight: 600;
+            }
+            .btn1{
+                background-color: rgb(240, 231, 241);
+                padding: .5rem 2.3rem;
+                font-family: "Poppins", serif;
+                color: rgb(9, 9, 62);
+                font-size: 1.4rem;
+                font-weight: 600;
+                border-radius: 1.5rem;
+                width: auto;
+                margin-top: 1rem;
+                transition: .5s ease-in-out;
+
+                &:hover{
+                    background-color: #fff;
+                }
             }
         }
 
@@ -40,6 +56,18 @@
             .main-heading{
                 h1{
                     font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .landing {
+        .box-model {
+            .main-heading {
+                h1 {
+                    font-size: 2.1rem;
                 }
             }
         }
@@ -86,13 +114,27 @@
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 425px){
+   .landing{
+    .box-model{
+        .main-heading{
+            text-align: center;
+            .btn1{
+                font-size: 1rem;
+                padding: .5rem 1.5rem;              
+            }
+        }
+    }
+   }
+}
+
+@media screen and (max-width: 390px) {
     .landing {
         .box-model {
 
             .main-heading {
                 h1 {
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                 }
             }
         }

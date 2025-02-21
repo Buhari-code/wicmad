@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Service.css'
 import { FaArrowRight } from "react-icons/fa";
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 const serviceData = [
   {
@@ -41,7 +43,11 @@ const serviceData = [
   },
 ]
 
-function Service() {
+function Service({ref}) {
+
+  useEffect(() => {
+    Aos.init({duration:1000, easing:'ease-in-cubic'})
+  }, [])
 
   const [isHover, setIsHover] = useState(null)
   const [expandService, setExpandService] = useState(null)
@@ -52,8 +58,11 @@ function Service() {
 
   return (
     <>
-    <div className="service section container" id='Services'>
-      <div className="box-model">
+    <div className="service section container" ref={ref}>
+      <div className="secHeading">
+        <h1>Services</h1>
+      </div>
+      <div className="box-model" data-aos='fade-up'>
         {serviceData.map((item) => (
            <div className={`box ${expandService === item.id ? 'expanded' : 'notexpand'}`} key={item.id}>
           <h2>{item.serviceHeading}</h2>
@@ -62,7 +71,7 @@ function Service() {
           onMouseOver={() => setIsHover(item.id)} 
           onMouseOut={() => setIsHover(null)}
           onClick={() => handleExpand(item.id)}>
-            {expandService ? 'show less' : item.button} {isHover === item.id ? <FaArrowRight /> : null}
+            {expandService === item.id ? 'show less' : item.button} {isHover === item.id ? <FaArrowRight /> : null}
           </button>
           {expandService === item.id && (
             <div className='extraContent'>

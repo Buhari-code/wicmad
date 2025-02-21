@@ -1,5 +1,28 @@
 .service {
     padding: 2rem 1rem;
+    
+
+    .secHeading{
+        font-family: "Poppins", serif;
+        text-align: center;
+        color: rgb(9, 9, 62);
+        padding-bottom: 1rem;
+        position: relative;
+        font-size: 1rem;
+    }
+        
+
+        .secHeading::after{
+            content: '';
+            position: absolute;
+            width: 4rem;
+            height: .14rem;
+            background-color: black;
+            top: 70%;
+            left: 50%;
+            transform: translateX(6%);
+        }
+    
 
     .box-model {
         display: grid;
@@ -10,7 +33,7 @@
 
 
         .box {
-            background-color: rgb(9, 9, 62);
+            background-color: rgb(240, 231, 241);
             padding: 1rem;
             border-top-right-radius: .7rem;
             border-top-left-radius: .7rem;
@@ -20,7 +43,7 @@
 
 
             h2 {
-                color: rgb(240, 231, 241);
+                color: rgb(9, 9, 62);
                 font-family: "Poppins", serif;
                 text-align: center;
                 border-radius: .6rem;
@@ -29,20 +52,20 @@
             }
 
             p {
-                color: #fff;
+                color: rgb(9, 9, 62);
                 font-family: "Poppins", serif;
                 padding-top: .9rem;
                 font-size: .9rem;
             }
 
             button {
-                color: rgb(9, 9, 62);
+                color: #fff;
                 font-family: "Poppins", serif;
                 font-size: 1rem;
                 margin-left: 0;
                 margin-top: 1rem;
                 font-weight: 700;
-                background-color: #fff;
+                background-color: rgb(9, 9, 62);
                 border-radius: .5rem;
                 padding-left: .7rem;
                 padding-right: .7rem;
@@ -53,18 +76,24 @@
                     font-size: 1rem;
                 }
             }
+                        button:hover {
+                            background-color: rgb(9, 9, 62);
+                            color: rgb(240, 231, 241);
+                            transition: 0.3s ease-in-out;
+                        }
 
             .extraContent {
-                background-color: rgb(9, 9, 62);
+                background-color: rgb(240, 231, 241);
                 position: absolute;
                 right: 0;
                 transform: translateY(7%);
                 padding: 1rem;
                 border-radius: 1rem;
+                z-index: 2000;
             }
         }
                 .box:nth-child(2) .extraContent {
-                    background-color: rgb(240, 231, 241);
+                    background-color: rgb(9, 9, 62);
                 }
 
         .expanded {
@@ -78,19 +107,19 @@
         }
 
         .box:nth-child(2) {
-            background-color: rgb(240, 231, 241);
+            background-color: rgb(9, 9, 62);
 
             h2 {
-                color: rgb(9, 9, 62);
+                color: rgb(240, 231, 241);
             }
 
             p {
-                color: rgb(9, 9, 62);
+                color: rgb(240, 231, 241);
             }
 
             button {
-                background-color: rgb(9, 9, 62);
-                color: rgb(240, 231, 241);
+                background-color: rgb(240, 231, 241);
+                color:rgb(9, 9, 62);
             }
         }
     }
@@ -120,6 +149,17 @@
     .service {
         .box-model {
             grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+}
+@media screen and (max-width : 350px){
+    .service{
+        .secHeading{
+            font-size: .8rem;
+        }
+        .secHeading::after{
+            transform: translateX(-15%);
         }
     }
 

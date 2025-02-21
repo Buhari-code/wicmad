@@ -3,17 +3,28 @@ import img1 from '../../assets/MAIN LOGO-cropped.svg'
 import './Navbar.css'
 import { FaBarsProgress } from "react-icons/fa6";
 import { ImCross } from "react-icons/im";
+import Landing from '../Landing/Landing';
+import Service from '../Service/Service';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
 
 function Navbar() {
 
   const [navbar, setNavbar] = useState(false)
   const navRef = useRef(null)
+    const aboutRef = useRef(null)
+    const homeRef = useRef(null)
+    const serviceRef = useRef(null)
+    const contactRef = useRef(null)
 
   const toggleNav = () => {
     setNavbar((prev) => !prev)
   }
 
-  const removeNavbar = () => {
+  const removeNavbar = (ref) => {
+    if(ref?.current){
+      ref?.current.scrollIntoView({behavior : 'smooth'})
+    }
     setNavbar(false)
   }
 
@@ -33,24 +44,15 @@ function Navbar() {
     setNavbar(false)
   }
 
-  const handleResize = () => {
-      setNavbar(false) 
-  }
-
-
 
   useEffect(() => {
    document.addEventListener("mousedown", handleOutsideClick)
    window.addEventListener("scroll", handleScroll)
-   window.addEventListener("resize", handleResize)
 
    return () => {document.removeEventListener("mousedown", handleOutsideClick)
     window.removeEventListener("scroll", handleScroll)
-     window.removeEventListener("resize", handleResize)
    }
   }, [])
-
-
 
 
   return (
@@ -62,11 +64,10 @@ function Navbar() {
               <img src={img1} alt="" />
             </div>
             <div className={`nav-tab ${navbar ? 'activeNavbar' : ''}`}>
-              <a href="#Home" onClick={removeNavbar}>Home</a>
-              <a href="#Services" onClick={removeNavbar}>Services</a>
-              <a href="#About Us" onClick={removeNavbar}>About Us</a>
-              <a href="#Contact" onClick={removeNavbar}>Contact</a>
-              <a href="#Contact" className='btn' onClick={removeNavbar}>Login</a>
+              <a href="#home" onClick={() => removeNavbar(homeRef)}>Home</a>
+              <a href="#services" onClick={() => removeNavbar(serviceRef)}>Services</a>
+              <a href="#about" onClick={() => removeNavbar(aboutRef)}>About Us</a>
+              <a href="#contact" onClick={() => removeNavbar(contactRef)}>Contact</a>
 
             </div>
           </div>
@@ -74,11 +75,12 @@ function Navbar() {
             {navbar ? <ImCross className='icon' /> : <FaBarsProgress className='icon' />}
 
           </button>
-          <div className="login-btn">
-            <button>Login</button>
-          </div>
         </div>
       </div>
+      <Landing ref={homeRef}/>
+      <Service ref={serviceRef}/>
+      <About ref={aboutRef}/>
+      <Contact ref={contactRef}/>
     </>
   )
 }

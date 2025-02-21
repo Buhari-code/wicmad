@@ -1,6 +1,11 @@
 .footer{
-    .box-model{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(9, 9, 62);
+    color: #fff;
+    padding:.6rem  1rem;
+    
+    h4{
+        font-family: "Poppins", serif;
+            font-weight: 300;
+            
     }
 }
